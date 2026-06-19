@@ -5,7 +5,7 @@ const addMenuItems = (category) => {
     section.className.includes(category),
   );
   const element = document.querySelector(`#${category}`);
-  const bgImageUrl = `url('./images/${category}.jpg')`;
+  const bgImageUrl = `url('images/${category}.jpg')`;
   element.style.setProperty("--slide-bg", bgImageUrl);
   element.innerHTML = `
             <div class="slide-title">
@@ -15,7 +15,7 @@ const addMenuItems = (category) => {
                 ${menuSection.items
                   .map(
                     (item) => `
-                                <div class="menu-item border-${category}-gradient"">
+                                <div class="menu-item border-${category}-gradient">
                                     <p>${item.name}</p>
                                     <p>${item.price ? `${item.price} ل.س` : ``}</p>
                                 </div>
