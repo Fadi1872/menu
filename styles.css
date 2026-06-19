@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #060112 0%, #0b0b26 50%, #150b3b 100%);
+}
+
+.neon-animated-bg {
+  background: linear-gradient(
+    125deg,
+    #060112 0%,
+    #0b0b26 20%,
+    #004b54 35%,
+    #0b0b26 55%,
+    #4a0025 65%,
+    #060112 80%,
+    #4a3300 100% 
+  );
+  background-size: 400% 400%;
+  animation: neonFlow 15s linear infinite;
+}
+@keyframes neonFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.subbody {
+  min-height: 100vh;
+  width: 100%;
+
+  backdrop-filter: blur(30px);
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--slide-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.12; 
+  z-index: -1; 
+  background-attachment: local; 
+}
+
+.border-mojito-gradient {
+  border: 2px solid #4facfe;
+  border-radius: 16px;
+}
+
+.border-worldcup-gradient {
+  border: 2px solid #0066ff;
+  border-radius: 16px;
+}
+
+.border-hotdrinks-gradient {
+  border: 2px solid #ff007f;
+  border-radius: 16px;
+}
+
+.border-shisha-gradient {
+  border: 2px solid #ff4500;
+  border-radius: 16px;
+}
+
+.slide-title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu {
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-item {
+  background-color: #0b0b2650;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  backdrop-filter: blur(100px);
+}
+
+.subbody, .slider-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  flex: 0 0 100vw;
+  height: 100vh;
+  
+  overflow-y: auto; 
+  -webkit-overflow-scrolling: touch; 
+}
+
+.footer{
+  height: 50vh;
+  backdrop-filter: blur(50px);
+  background-color: #0b0b26a0;
+}
+
+/* حاوية شاشة التحميل الكاملة */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #060112; /* نفس لون خلفيتك الداكنة */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* أعلى من كل عناصر الموقع */
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+/* محتوى شاشة التحميل */
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* الشعار وتأثير حركة النبض الأنيميشن */
+.loading-logo {
+  width: 150px; /* تحكم بحجم الشعار من هنا */
+  height: auto;
+  animation: logoPulse 2s ease-in-out infinite;
+}
+
+/* حركة النبض السحرية للشعار */
+@keyframes logoPulse {
+  0% {
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 5px rgba(0, 242, 254, 0.2));
+  }
+  50% {
+    transform: scale(1.05);
+    /* يعطي توهج نيون خلف الشعار أثناء النبض */
+    filter: drop-shadow(0 0 20px rgba(0, 242, 254, 0.6)); 
+  }
+  100% {
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 5px rgba(0, 242, 254, 0.2));
+  }
+}
+
+/* خط تحميل صغير إضافي أسفل الشعار لتأكيد التحميل */
+.loading-bar {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(135deg, #00F2FE 0%, #FF007F 100%);
+  border-radius: 3px;
+  animation: barLoading 1.5s ease-in-out infinite;
+}
+
+@keyframes barLoading {
+  0% { transform: scaleX(0.2); opacity: 0.2; }
+  50% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(0.2); opacity: 0.2; }
+}
+
+/* كلاس يتم إضافته بالجافا سكريبت لإخفاء الشاشة بسلاسة */
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}

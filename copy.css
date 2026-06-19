@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cairo", sans-serif;
+    direction: rtl;
+}
+
+.navs::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #060112 0%, #0B0B26 50%, #150B3B 100%);
+}
+
+/*
+    the navs section
+*/
+.navs {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    overflow: scroll;
+    padding: 30px;
+}
+
+/* the nav btns */
+/* الوضع العادي */
+.btn-mojito {
+  background: transparent;
+  padding: 10px;
+  white-space: nowrap;
+  border-radius: 10px;
+  color: #00F2FE;
+  border: 2px solid #00F2FE;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* عند الـ Hover */
+.btn-mojito:hover {
+  background: #00F2FE;
+  color: #060112; /* لون الخلفية الداكن */
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.8);
+}
+
+/* الوضع العادي */
+.btn-worldcup {
+  background: transparent;
+  padding: 10px;
+  white-space: nowrap;
+  border-radius: 10px;
+  color: #00D2FF;
+  border: 2px solid #00D2FF;
+  box-shadow: 0 0 8px rgba(0, 210, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* عند الـ Hover */
+.btn-worldcup:hover {
+  background: #00D2FF;
+  color: #060112;
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.8);
+}
+
+/* الوضع العادي */
+.btn-hotdrinks {
+  background: transparent;
+  padding: 10px;
+  white-space: nowrap;
+  border-radius: 10px;
+  color: #FF007F;
+  border: 2px solid #FF007F;
+  box-shadow: 0 0 8px rgba(255, 0, 127, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* عند الـ Hover */
+.btn-hotdrinks:hover {
+  background: #FF007F;
+  color: #fff; /* الأبيض هنا أفضل للتباين مع الوردي */
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.8);
+}
+
+/* الوضع العادي */
+.btn-shisha {
+  background: transparent;
+  padding: 10px;
+  white-space: nowrap;
+  border-radius: 10px;
+  color: #FEB100;
+  border: 2px solid #FEB100;
+  box-shadow: 0 0 8px rgba(254, 177, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* عند الـ Hover */
+.btn-shisha:hover {
+  background: #FEB100;
+  color: #060112;
+  box-shadow: 0 0 20px rgba(254, 177, 0, 0.8);
+}
+
+/* menu items */
+
+.menuItems {
+    margin-inline: 30px;
+    border-radius: 10px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.nav-item{
+    background-color: #0B0B26;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* 1. كلاس خلفية قسم منطقة الانتعاش (Mojito & Juices) */
+.bg-mojito-gradient {
+  background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
+  color: #060112; /* نص داكن ليتناسب مع الخلفية الفاتحة */
+}
+
+/* 2. كلاس خلفية قسم مأكولات كأس العالم (World Cup Foods) */
+.bg-worldcup-gradient {
+  background: linear-gradient(135deg, #00D2FF 0%, #0066FF 100%);
+  color: #ffffff; /* نص أبيض لتباcontrast ممتاز */
+}
+
+/* 3. كلاس خلفية قسم المشروبات الساخنة (Hot Drinks) */
+.bg-hotdrinks-gradient {
+  background: linear-gradient(135deg, #FF007F 0%, #7928CA 100%);
+  color: #ffffff;
+}
+
+/* 4. كلاس خلفية قسم ركن الأركيلة (Shisha) */
+.bg-shisha-gradient {
+  background: linear-gradient(135deg, #FEB100 0%, #FF4500 100%);
+  color: #060112; /* نص داكن لسهولة القراءة فوق الأصفر والبرتقالي */
+}
