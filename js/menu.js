@@ -5,7 +5,7 @@ const addMenuItems = (category) => {
     section.className.includes(category),
   );
   const element = document.querySelector(`#${category}`);
-  const bgImageUrl = `url('../images/${category}.jpg')`;
+  const bgImageUrl = `url('./images/${category}.jpg')`;
   element.style.setProperty("--slide-bg", bgImageUrl);
   element.innerHTML = `
             <div class="slide-title">
