@@ -48,7 +48,7 @@ export const menu = [
     ],
   },
   {
-    category: "WORLD CUP FOODS | مأكولات كأس العالم",
+    category: "WORLD CUP FOODS مأكولات كأس العالم",
     className: "worldcup",
     items: [
       { name: "وجبة طوشكا", price: 40000 },
