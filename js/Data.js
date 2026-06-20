@@ -87,7 +87,7 @@ export const menu = [
     ],
   },
   {
-    category: "BURGER | همبرغو",
+    category: "BURGER | همبرغر",
     className: "burger",
     items: [
       { name: "وجبة أوريجينال برغر", price: 55000 },
