@@ -149,10 +149,8 @@ body {
   scroll-snap-stop: always;
 }
 
-.footer{
-  height: 50vh;
-  backdrop-filter: blur(50px);
-  background-color: #0b0b26a0;
+.slide::-webkit-scrollbar {
+  display: none;
 }
 
 /* حاوية شاشة التحميل الكاملة */
@@ -217,8 +215,172 @@ body {
   100% { transform: scaleX(0.2); opacity: 0.2; }
 }
 
-/* كلاس يتم إضافته بالجافا سكريبت لإخفاء الشاشة بسلاسة */
 #loading-screen.fade-out {
   opacity: 0;
   visibility: hidden;
+}
+
+/* تنسيق الفوتر الأساسي */
+.site-footer {
+  background: rgba(11, 11, 38, 0.8); /* خلفية داكنة شبه شفافة متناسقة مع الثيم */
+  backdrop-filter: blur(20px);
+  padding: 30px 20px;
+  border-top: 1px solid rgba(0, 242, 254, 0.2); /* خط نيون علوي نحيف جدًا */
+  width: 100%;
+  direction: rtl;
+}
+
+/* حاوية العناصر لتوزيعها بشكل طولي متناسق */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+/* صندوق اللوغو وحجم الشعار في الأسفل */
+.footer-logo-box {
+  margin-bottom: 5px;
+}
+
+.footer-logo-animated {
+  width: 100px; /* حجم ناعم ومناسب للفوتر */
+  height: auto;
+  /* أنيميشن بسيط: نبض ناعم مستمر كل 3 ثوانٍ */
+  animation: footerLogoGlow 3s ease-in-out infinite;
+}
+
+/* الأنيميشن البسيط للشعار (توهج ونبض خفيف جداً لا يشتت العين) */
+@keyframes footerLogoGlow {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 2px rgba(0, 242, 254, 0.1));
+  }
+  50% {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.4));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 2px rgba(0, 242, 254, 0.1));
+  }
+}
+
+/* تنسيق النصوص */
+.management-title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.contact-item {
+  color: #b3b3cc;
+  font-size: 1rem;
+}
+
+.contact-item span {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* روابط الأرقام وتأثير النيون عند اللمس */
+.neon-text-blue {
+  color: #00F2FE;
+  text-decoration: none;
+  font-weight: bold;
+  transition: text-shadow 0.3s ease;
+}
+
+.neon-text-blue:hover {
+  text-shadow: 0 0 8px #00F2FE;
+}
+
+.separator {
+  color: #fff;
+  margin: 0 8px;
+}
+
+/* زر الفيسبوك المضيء */
+.facebook-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #0066ff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.facebook-btn:hover {
+  background: #0066ff;
+  box-shadow: 0 0 15px rgba(0, 102, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* في الوضع الطبيعي (على الموبايل): شاشة الحجب مخفية تماماً */
+#mobile-only-overlay {
+  display: none;
+}
+
+/* 🖥️ عندما تكون الشاشة أكبر من 768 بكسل (لابتوب، كمبيوتر، تابلت كبير) */
+@media screen and (min-width: 769px) {
+  #mobile-only-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, #150b3b 0%, #060112 100%);
+    z-index: 100000; /* أعلى من شاشة التحميل وأي عنصر آخر */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    direction: rtl;
+  }
+
+  /* كرت الرسالة في المنتصف مع حواف نيون متناسقة مع ثيم موقعك */
+  .overlay-card {
+    background: rgba(11, 11, 38, 0.6);
+    backdrop-filter: blur(20px);
+    border: 2px solid #00F2FE; /* نيون سيان */
+    box-shadow: 0 0 30px rgba(0, 242, 254, 0.3);
+    padding: 40px;
+    border-radius: 24px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .overlay-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.5));
+  }
+
+  .overlay-card h2 {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+
+  .overlay-card p {
+    color: #b3b3cc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  /* إخفاء شريط السلايدر الأصلي تماماً لضمان عدم تفاعل المستخدم بالخلفية */
+  .subbody, .slider-container, #loading-screen {
+    display: none !important;
+  }
 }
