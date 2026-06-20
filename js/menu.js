@@ -30,6 +30,7 @@ addMenuItems("mojito");
 addMenuItems("hotdrinks");
 addMenuItems("worldcup");
 addMenuItems("shisha");
+addMenuItems("burger");
 
 // --- TOUCH SWIPE TRACKER ---
 

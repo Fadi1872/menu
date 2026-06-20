@@ -21,8 +21,13 @@ export const menu = [
       { name: "عصير فواكه كوكتيل", price: 30000 },
       { name: "سلطة فواكه", price: 40000 },
       { name: "بيروت بير تنك", price: 35000 },
-      { name: "افاميا", price: 28000 }
-    ]
+      { name: "افاميا", price: 28000 },
+      { name: "فروتي كرتون", price: 3000 },
+      { name: "فروتي بلاستيك", price: 6000 },
+      { name: "فروتي زجاج", price: 6000 },
+      { name: "ميلك تشوكلت فرابي", price: 25000 },
+      { name: "ميلك لوتس فرابي", price: 25000 },
+    ],
   },
   {
     category: "HOT DRINKS | المشروبات الساخنة",
@@ -36,21 +41,38 @@ export const menu = [
       { name: "متة", price: 8000 },
       { name: "شاي", price: 6000 },
       { name: "زهورات", price: 6000 },
-      { name: "كمون بليمون", price: 6000 }
-    ]
+      { name: "كمون بليمون", price: 6000 },
+      { name: "قهوة", price: 6000 },
+      { name: "نسكافيه", price: 6000 },
+      { name: "كاسة اندومي", price: 10000 },
+    ],
   },
   {
     category: "WORLD CUP FOODS | مأكولات كأس العالم",
     className: "worldcup",
     items: [
-      { name: "مناقيش بأنواعها", price: null }, // الأسعار غير محددة في الصورة لهذا القسم
-      { name: "بيتزا بأنواعها", price: null },
-      { name: "بطاطا كاسات", price: null },
-      { name: "بطاطا سندويش", price: null },
-      { name: "طوشكا", price: null },
-      { name: "طلياني + قشقوان", price: null },
-      { name: "سجق + قشقوان", price: null }
-    ]
+      { name: "وجبة طوشكا", price: 40000 },
+      { name: "وجبة سجق", price: 40000 },
+      { name: "بطاطا كاسات", price: 7000 },
+      { name: "منقوشة سجق", price: 15000 },
+      { name: "جبنة وحر", price: 6000 },
+      { name: "جبنة", price: 6000 },
+      { name: "محمرة", price: 5000 },
+      { name: "زعتر", price: 5000 },
+      { name: "قشقوان وحر", price: 7000 },
+      { name: "مرتديلا وقشقوان", price: 10000 },
+      { name: "بيتزا", price: 10000 },
+      { name: "لحمة", price: 10000 },
+      { name: "صحن بطاطا", price: 15000 },
+      { name: "بيتزا صغير", price: 35000 },
+      { name: "بيتزا وسط", price: 60000 },
+      { name: "بيتزا كبير", price: 80000 },
+      { name: "بيتزا سجق وسط", price: 75000 },
+      { name: "طلياني", price: 15000 },
+      { name: "قشقوان", price: 9000 },
+      { name: "بطاطا عادي سندويش", price: 15000 },
+      { name: "بطاطا دبل سندويش", price: 20000 },
+    ],
   },
   {
     category: "SHISHA | ركن الأركيلة",
@@ -61,7 +83,19 @@ export const menu = [
       { name: "أركيلة بولو", price: 25000 },
       { name: "أركيلة تفاحتين نخلة", price: 30000 },
       { name: "أركيلة بالفواكه - برتقال", price: 50000 },
-      { name: "أركيلة بالفواكه - بوملي", price: 60000 }
-    ]
-  }
+      { name: "أركيلة بالفواكه - بوملي", price: 60000 },
+    ],
+  },
+  {
+    category: "BURGER | همبرغو",
+    className: "burger",
+    items: [
+      { name: "وجبة أوريجينال برغر", price: 55000 },
+      { name: "أوريجينال برغر", price: 45000 },
+      { name: "وجبة كلاسيك برغر", price: 55000 },
+      { name: "كلاسيك برغر", price: 45000 },
+      { name: "تشيلي برغر", price: 45000 },
+      { name: "وجبة تشيلي برغر", price: 55000 },
+    ],
+  },
 ];

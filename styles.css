@@ -108,6 +108,11 @@ body {
   border-radius: 16px;
 }
 
+.border-burger-gradient {
+  border: 2px solid #ffcc00;
+  border-radius: 16px;
+}
+
 .slide-title {
   color: #fff;
   text-align: center;
